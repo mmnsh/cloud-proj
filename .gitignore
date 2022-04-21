@@ -1,0 +1,10 @@
+# created by virtualenv automatically
+/bin
+/lib
+/pyvenv.cfg
+/project.pdf
+/doctors_office_management_system/doctors_office_management_system/__pycache__
+/doctors_office_management_system/user_account/__pycache__
+/doctors_office_management_system/user_account/migrations/__pycache__
+/.vscode
+/PH1.pdf

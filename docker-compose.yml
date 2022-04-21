@@ -1,0 +1,29 @@
+version : "3.8"
+services:
+  doctor_panel:
+    image: sajadkh/doctor_system_doctor_panel
+    ports: 
+      - 8001:8001
+
+  patient_panel:
+    image: sajadkh/doctor_system_patient_panel
+    ports: 
+      - 8002:8002
+
+  authentication:
+    image: sajadkh/doctor_system_authentication
+    ports: 
+      - 8000:8000
+    deploy:
+      replicas: 2
+
+  visualizer:
+    image: dockersamples/visualizer
+    ports:
+      - 8080:8080
+    volumes:
+       - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
